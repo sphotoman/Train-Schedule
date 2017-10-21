@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Train Schedule</title>
+		  <!-- Compiled and minified CSS -->
+	  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+		
+		<!--Import Google Icon Font-->
+	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	  
+	  	<!--Let browser know website is optimized for mobile-->
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	          
+	</head>
+
+	<body>
+	 	<div class="container"> 
+	 		<nav>
+			    <div class="nav-wrapper #1a237e indigo darken-4">
+			      <a href="#" class="brand-logo center">Scott's Magical Train Schedule</a>
+			    </div>
+			 </nav>
+
+	 <!-- Train Schedule Display		 -->
+			<h5>Current Train Schedule</h2>
+			<table id=trainTable class="striped col s12">
+		        <thead>
+		          	<tr>
+			            <th>Train Name</th>
+			            <th>Destination</th>
+			            <th>Frequency (min)</th>
+			            <th>Next Arrival</th>
+			            <th>Minutes Away</th>
+		          	</tr>
+		        </thead>
+
+		        <tbody>
+			        <tr id=trainDetails>
+			    		<!-- JavaScript inserts Train Schedule information from FireBase -->
+			        </tr>
+		        </tbody>
+	      	</table>
+
+	<!--<br> Form for new train & related info -->
+		<br> <br><br> <br>
+		<div class="row">
+		    <form class="col s12">
+		    	<h5>Add New Train to the Magical Train Schedule</h2>
+			      <div class="row">
+			        <div class="input-field col s6">
+			          <input placeholder="Enter Train Name" 
+		          			id="trainNameInput" 
+		          			name="trainNameInput"
+		          			type="text" 
+		          			class="validate">
+			          <label for="trainName">Train Name</label>
+			        </div>
+			        <div class="input-field col s6">
+			          <input placeholder="Enter New Destination" 
+			          		id="destinationInput"
+			          		name="destinationInput" 
+			          		type="text" 
+			          		class="validate">
+			          <label for="destination">Destination</label>
+			        </div>
+			      </div>
+
+			      <div class="row">
+			        <div class="input-field col s6">
+			          <input placeholder="Enter Time for 1st Train of the Day" 
+			          		id="firstTrainTimeInput" 
+			          		name="firstTrainTimeInput" 
+			          		type="text" 
+			          		class="validate">
+			          <label for="firstTrain">First Train Time (HH:mm - Military Time)</label>
+			        </div>
+			        <div class="input-field col s6">
+			          <input placeholder="In minutes, How often does it run?" 
+					          id="frequencyInput"
+					          name="frequencyInput" 
+					          type="text" 
+					          class="validate">
+			          <label for="frequency">Frequency</label>
+			        </div>
+				</div>
+				
+				<!-- button to submit form containing new trair information -->
+			    <button class="btn waves-effect waves-light #1a237e indigo darken-4" 
+			    		type="submit"
+			    		id="myNewTrainButton" 
+			    		name="action">Submit
+				    <i class="material-icons right" >send</i>
+				</button>
+
+		    </form>
+		</div>
+	        
+	        
+		</div>
+		<!-- cdn for jQuery -->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		
+		<!-- FireBase Connecting Script -->
+		<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+
+		<!-- Compiled and minified JavaScript -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.0/moment.min.js"></script>
+		
+		<!-- cdn for Materialize JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+		
+		<!-- link to my javascript -->
+		<script src="script.js"></script>
+
+	</body>
+
+</html>
